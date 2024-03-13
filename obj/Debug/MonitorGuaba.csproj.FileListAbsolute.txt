@@ -1,0 +1,8 @@
+C:\ProjectNode\MonitorGuaba\bin\Debug\MonitorGuaba.exe.config
+C:\ProjectNode\MonitorGuaba\bin\Debug\MonitorGuaba.exe
+C:\ProjectNode\MonitorGuaba\bin\Debug\MonitorGuaba.pdb
+C:\ProjectNode\MonitorGuaba\obj\Debug\MonitorGuaba.csproj.AssemblyReference.cache
+C:\ProjectNode\MonitorGuaba\obj\Debug\MonitorGuaba.csproj.SuggestedBindingRedirects.cache
+C:\ProjectNode\MonitorGuaba\obj\Debug\MonitorGuaba.csproj.CoreCompileInputs.cache
+C:\ProjectNode\MonitorGuaba\obj\Debug\MonitorGuaba.exe
+C:\ProjectNode\MonitorGuaba\obj\Debug\MonitorGuaba.pdb
