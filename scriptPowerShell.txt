@@ -1,0 +1,33 @@
+# Ruta del archivo de registro (cambia la ruta según tu necesidad)
+$archivoLog = "C:\Users\e.moreta\Documents\Logs\2024-01-19.Log-server.txt"
+
+
+
+# Función para buscar la palabra clave en el log
+function Buscar-PalabraClave {
+    param (
+        [string]$rutaArchivo,
+        [string]$palabrasClave
+    )
+
+    Get-Content $rutaArchivo -Wait | ForEach-Object {
+        if ($_ -match $palabrasClave) {
+            Write-Host "Palabra clave encontrada: $_"
+            # Puedes realizar acciones adicionales aquí, si es necesario
+            $Body = @{
+            type=$palabrasClave;
+            message = $_;
+            code="[022]";
+            dateTime="1/19/2024 5:19:01 PM"
+            }
+            $JsonBody = $Body | ConvertTo-Json
+            #$Uri = “http://localhost:5000/api/messages”
+            $Uri = “https://comunication.app.guabastudio.com/api/messages”
+
+            Invoke-RestMethod -ContentType “application/json” -Uri $Uri -Method Post -Body $JsonBody
+        }
+    }
+}
+
+# Iniciar la búsqueda de la palabra clave en tiempo real
+Buscar-PalabraClave -rutaArchivo $archivoLog -palabrasClave "error"
